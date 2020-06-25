@@ -1,0 +1,68 @@
+<!--
+**********************************************
+ * 프로그램명 : content_main.xml
+ * 작성자 : 2015023025 배나영
+ * 작성일 : 2020.04.10
+ *프로그램 설명 : 안드로이드 프로젝트를 실행했을 때 제일 처음으로 보이는 화면
+ ************************************************
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="url을 입력하세요." />
+
+    <Button
+        android:id="@+id/showText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showText"
+        android:text="글자 나타내기" />
+
+    <Button
+        android:id="@+id/openPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showUrl"
+        android:text="홈페이지 열기" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioPie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:text="파이" />
+        <RadioButton
+           android:id="@+id/radioOreo"
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:text="오레오" />
+
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</LinearLayout>
